@@ -1,0 +1,53 @@
+.commmandTitle{
+    margin-left: 10%;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.commmandTitle > p{
+    margin-left: 15px;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.commmandTitle > hr{
+    float: left;
+    margin-bottom: 0;
+    border: var(--purple) solid 4px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.commandField{
+    position: relative;
+    margin-top: 75px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background-color: var(--accentGray);
+    border-radius: 25px;
+    border: var(--purple) solid 5px;
+}
+
+.commandField > p{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.commandFieldGrid{
+    position: relative;
+    margin-top: 75px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background-color: var(--accentGray);
+    border-radius: 25px;
+    border: var(--purple) solid 5px;
+}

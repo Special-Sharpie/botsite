@@ -1,0 +1,37 @@
+.contactTitle{
+    margin-left: 10%;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.contactTitle > p{
+    margin-left: 15px;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.contactTitle > hr{
+    float: left;
+    margin-bottom: 0;
+    border: var(--purple) solid 4px;
+    border-radius: 5px;
+    width: 145px;
+}
+
+.contactField{
+    position: relative;
+    margin-top: 75px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background-color: var(--accentGray);
+    border-radius: 25px;
+    border: var(--purple) solid 5px;
+}
+
+.contactField > p{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
