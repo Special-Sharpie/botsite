@@ -21,21 +21,22 @@ function Invite() {
                         <br />
                         <br />
                         Once the bot has been added, there are two commands to be run. 
-                        <ol>
-                            <li>
-                                HS-info, this provides a link to all the commands and all relevant information about the commands.
-                                Alternatively, you can go to the <NavLink
-                                    to="/commands"
-                                    className="inTextLink"
-                                    >Command List</NavLink> page.
-                            </li>
-                            <li>
-                                HS-setTimezone, this will let you change the timezone of the server.
-                                There are four options available, Eastern Time: ET, Central Tim: CT, Mountain Time: MT (default), and Pacific time: MT.
-                                Simply run HS-setTimezone TIMEZONE CODE to change the timezone. Example: HS-setTimezone ET
-                            </li>
-                        </ol>
                     </p>
+                    <ol>
+                        <li>
+                            HS-info, this provides a link to all the commands and all relevant information about the commands.
+                            Alternatively, you can go to the <NavLink
+                                to="/commands"
+                                className="inTextLink"
+                                >Command List</NavLink> page.
+                        </li>
+                        <li>
+                            HS-setTimezone, this will let you change the timezone of the server.
+                            There are four options available, Eastern Time: ET, Central Tim: CT, Mountain Time: MT (default), and Pacific time: MT.
+                            Simply run HS-setTimezone TIMEZONE CODE to change the timezone. Example: HS-setTimezone ET
+                        </li>
+                    </ol>
+                
                 </div>
             </div>
         </div>

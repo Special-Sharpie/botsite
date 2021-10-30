@@ -38,10 +38,11 @@
 
 .gridContainer{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
 }
 
 .commandFieldGrid{
+    display: inline-grid;
     position: relative;
     margin-top: 75px;
     box-sizing: border-box;
@@ -51,3 +52,18 @@
     border-radius: 25px;
     border: var(--purple) solid 5px;
 }
+
+.commandFieldGrid > p{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.commandFieldGrid > h1{
+    text-align: center;
+    margin-top: 45px;
+    color: #ffffff;
+}
+
+

@@ -1,16 +1,12 @@
-import React from 'react'
-import CommandItem from '../components/CommandItem'
-import './Commands.css'
-
-let commandDescription = {
-    "HS-teamWL" : ["This command returns the current season Win/loss/OT record for the requested team, requiring 1 parameter, the teams Abbreviation.", "Example: HS-teamWL CGY"],
+{
+    "HS-teamWL" : ["When run, this command returns the current season Win/loss/OT record for the requested team, requiring 1 parameter, the opposing teams Abbreviation.", "Example: HS-teamWL CGY"],
     "HS-lifeWL" : ["This command returns the lifetime Win/Loss at home, on the road, stats between two teams. This requires two parameters, the first Abbreviation, and second Abbreviation.", "Example: HS-lifeWL CGY EDM"],
     "HS-Pstats" : ["This command returns the most relevant stats for each player. This takes three parameters, the name which is required, a season, and a season type character (both of which are optional).", "Example: HS-Pstats JacobMarkstrom or HS-Pstats ConnorMcDavid 20192020 P"], 
     "HS-Gnext" : ["This command returns the next game date for the requested team, checking the next 10 days from the date the command was run. It only requires one parameter, a team Abbreviation.", "Example: HS-Gnext CGY"],
     "HS-Glast" : ["This command returns the last game date played by the requested team, checking the last 10 days from the date the command was run. It only requires one parameter, a team Abbreviation.", "Example: HS-Glast CGY"],
     "HS-Gtoday" : ["This command returns some info about the game of that current day of the requested team. It will return the game's matchup, and game stats as they become available. It only requires one parameter, a team ID.", "Example: HS-Gtoday CGY"],
     "HS-divStandings" : ["(Being re-worked. Does not return proper data.)This command returns the current season’s, and only he current season’s, divisional standings. This requires one parameter, the division. The 2020-2021 season has brought us new division. The accepted format of the division name is as follows: CENTRAL: Central, EAST: East, NORTH: North, WEST: West.", "N/A"],
-    "HS-confStandings" : ["This command returns the current season’s, conference standings. This requires one parameter, the conference(Eastern, Western).", "Example: HS-confStandings Western"],
+    "HS-confStandings" : ["Conferences are not in use in 2020-2021 This command returns the current season’s, conference standings. This requires one parameter, the conference(Eastern, Western).", "Example: HS-confStandings Western"],
     "HS-leagueStandings" : ["This command returns the standings for the entire league, and can be run for any season in NHL history. This command has no required parameters, but can be passed an optional season.", "Example: HS-leagueStandings or Hs-leagueStandings 20182019"],
     "HS-playoffStandings" : ["This command returns the data of any requested playoff series, from any round, during any season. It will return the team matchup, as well as the record for the series. This command requires three parameters, a team abbreviation, a playoff round (SCQ, R1, R2, CF, SCF), and the season. Note, SCQ only works for the 20192020 qualifier round.", "Exmaple: HS-playOffstandings CGY SCQ 20192020"],
     "HS-daySummary" : ["Returns a rundown of all games happening on the requested day. Can be passed an optional parameter Date (YYYY-MM-DD).", "Example: HS-daySummary or HS-daySummary 2021-10-29"],
@@ -27,39 +23,3 @@ let commandDescription = {
     "HS-commandHistory" : ["Sends the requesting a user a JSON file with all the command attempts after version 1.4.0.", "Example: HS-commandHistory"],
     "HS-info" : ["Sends the user resources for navigating the bot.", "Example:HS-Info"]
 }
-
-
-function Commands() {
-    let commandsList = []
-    let i = 0
-    for (var key in commandDescription){
-        let commandName = key;
-        let desc = commandDescription[key][0];
-        let example = commandDescription[key][1]
-        commandsList.push(<CommandItem commandName={commandName} desc={desc} example={example} key={i} />)
-        i += 1
-        
-        }
-    
-    return (
-        <div>
-            <div className="commmandTitle">
-                <p>Command List</p>
-                <hr />
-            </div>
-            <div className="pageBody">
-                <div className="commandField">
-                    <p>
-                        Here you will find all the available commands for the bot, what they do, and how to properly pass all the required arguments. 
-                        We intend to continually add new features and commands to the bot as time goes on, this page will document them all as they are released.
-                    </p>
-                </div>
-                <div className="gridContainer">
-                    {commandsList}
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default Commands
