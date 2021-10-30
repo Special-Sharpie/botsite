@@ -27,7 +27,6 @@ function App() {
                     <Route path="/contact" exact={true} component={Contact}/>
                 </Switch>
             </div>
-            <div >pog</div>
         </Router>
     );
 }
