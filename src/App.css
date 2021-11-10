@@ -7,11 +7,13 @@
 }
 body{
     background-color: var(--gray);
+    background-image: url(./media/geobgp.png);
+    background-position: right top;
+    background-repeat: repeat-y;
     margin: 100px 20%;
 }
 
 .page{
-    background-color: var(--gray);
     min-height: 6250px;
 }
 
