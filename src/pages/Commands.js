@@ -42,7 +42,7 @@ function Commands() {
         }
     
     return (
-        <div>
+        <div  className="page" > 
             <div className="commmandTitle">
                 <p>Command List</p>
                 <hr />

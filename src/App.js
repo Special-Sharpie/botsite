@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-do
 function App() {
     return (
         <Router>
-            <div className="page" >
+            <div>
                 <img src="./hockeyStatsBotLogo.jpg" className="logo" alt=""/>
                 <div className="mainText">
                     <span className="mainTitle">HockeyStats Bot</span>
