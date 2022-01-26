@@ -22,7 +22,7 @@ let commandDescription = {
     "HS-Pinfo" : ["Returns a suite of information about the requested player.", "Example HS-Pinfo JohnnGaudreau"],
     "HS-Tinfo" : ["Returns a suite of information about the requested team.", "Example HS-Tinfo CGY"],
     "HS-ATplayerStats" : ["Returns the career stats of all active and unactive NHL players. Similar to skaterCareer, only with less data and support for goalies.", "Example: HS-ATplayerStats JaromeIginla"],
-    "HS-statLeader" : ["Returns the highest scorers of the requested stat from high to low, takes the team abbreviation, how many places (top 10, top 5 etc) and the stat, which defaults to points.", "Example: HS-statLeaders CGY 10 goals"],
+    "HS-statLeaders" : ["Returns the highest scorers of the requested stat from high to low, takes the team abbreviation, how many places (top 10, top 5 etc) and the stat, which defaults to points.", "Example: HS-statLeaders CGY 10 goals"],
     "HS-singleStat" : ["Returns a single requested stat. Takes 3 parameters, a player name, a stat code, and a season which is optional. Use HS-statCodes for all stat codes.", "Example: HS-singleStat BlakeColeman faceOffPct 20202021"],
     "HS-commandHistory" : ["Sends the requesting a user a JSON file with all the command attempts after version 1.4.0.", "Example: HS-commandHistory"],
     "HS-info" : ["Sends the user resources for navigating the bot.", "Example:HS-Info"]
