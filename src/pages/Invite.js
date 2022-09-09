@@ -13,7 +13,7 @@ function Invite() {
                 <div className="inviteField">
                     <p>
                         Click <a 
-                            href="https://discord.com/api/oauth2/authorize?client_id=735215611256373389&permissions=18432&scope=bot"
+                            href="https://discord.com/api/oauth2/authorize?client_id=735215611256373389&permissions=2147534848&scope=applications.commands%20bot"
                             target="_blank"
                             className="inTextLink"
                             rel="noreferrer"
