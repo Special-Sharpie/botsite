@@ -3,6 +3,7 @@ import About from './pages/About';
 import Invite from './pages/Invite';
 import Commands from './pages/Commands';
 import Contact from './pages/Contact';
+import World from './pages/World'
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/invite" exact={true} component={Invite}/>
                     <Route path="/commands" exact={true} component={Commands}/>
                     <Route path="/contact" exact={true} component={Contact}/>
+                    <Route path="/world" exact={true} component={World} />
                 </Switch>
             </div>
         </Router>
