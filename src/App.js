@@ -20,6 +20,7 @@ function App() {
                     <NavLink to="/invite" className="navbarContent" activeClassName="navbarActive">Invite</NavLink>
                     <NavLink to="/commands" className="navbarContent" activeClassName="navbarActive">Commands</NavLink>
                     <NavLink to="/contact" className="navbarContent" activeClassName="navbarActive">Contact</NavLink>
+                    <NavLink to="/world" className="navbarContent" activeClassName="navbarActive">World</NavLink>
                 </div>
                 <Switch>
                     <Route path="/" exact={true} component={About}/>
