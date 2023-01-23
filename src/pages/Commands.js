@@ -1,5 +1,4 @@
 import React from 'react'
-import './Commands.css'
 
 function Commands() {
     // async function commandsList(){
