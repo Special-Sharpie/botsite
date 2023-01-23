@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/hockeyStatsBotLogo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="keywords" content="Hockey, Discord, Bot, Stats, Hockey Stats" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/hockeyStatsBotLogo.jpg" />
-    <title>Hockeystats Bot</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/media/bot_logo_rounded.png">
+    <link rel="icon" href="%PUBLIC_URL%/media/bot_logo_rounded.png">
+    <script src="https://kit.fontawesome.com/333efb0c4e.js" crossorigin="anonymous"></script>
+    <title>HockeyStats Bot</title>
   </head>
   <body>
     <div id="root"></div>
   </body>
+  <script>
+        async function commands(){
+            try{
+                var getCommands = await fetch('/media/commanddesc.json')
+                var commandsJson = await getCommands.json()
+                for (command in commandsJson){
+                    $("#commandList").append(`<h2 class="commandheader">${command}</h2><div class="jumbotron hsbheadline"><p>${commandsJson[command][0]}</p><br/><p>${commandsJson[command][1]}</p></div>`)
+                }
+            }catch{
+                return
+            }
+        }
+        commands()
+    </script>
 </html>
