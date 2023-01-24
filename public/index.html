@@ -15,18 +15,4 @@
   <body>
     <div id="root"></div>
   </body>
-  <script>
-        async function commands(){
-            try{
-                var getCommands = await fetch('/media/commanddesc.json')
-                var commandsJson = await getCommands.json()
-                for (command in commandsJson){
-                    $("#commandList").append(`<h2 class="commandheader">${command}</h2><div class="jumbotron hsbheadline"><p>${commandsJson[command][0]}</p><br/><p>${commandsJson[command][1]}</p></div>`)
-                }
-            }catch{
-                return
-            }
-        }
-        commands()
-    </script>
 </html>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function About() {
     return (
@@ -11,16 +12,16 @@ function About() {
                 <div className="collapse navbar-collapse" id="navbaritems">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <a href="/" className="nav-link hsbnavlink hsbtitle">HockeyStats Bot</a>
+                            <Link to="/" className="hsbnavlink hsbtitle">HockeyStats Bot</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/" className="nav-link hsbnavlink active">Home</a>
+                            <Link to="/" className="nav-link hsbnavlink active">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/invite" className="nav-link hsbnavlink">Invite</a>
+                            <Link to="/invite" className="nav-link hsbnavlink">Invite</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/commands" className="nav-link hsbnavlink">Commands</a>
+                            <Link to="/commands" className="nav-link hsbnavlink">Commands</Link>
                         </li>
                     </ul>
                 </div>
@@ -49,6 +50,7 @@ function About() {
                         Like the bot, and want to suppport its development? Donate here!
                     </p>
                 </div>
+                <hr className="hsbrule" style={{height: 5+'px', border: 'none'}}/>
                 <div className="row justify-content-evenly text-center uppermargin" >
                     <div className="col-lg-6 justify-content-center alternatingtext">
                         <h2 className='hsbimagetext'>Get an overview of the day's games, and scores!</h2>
@@ -73,6 +75,7 @@ function About() {
                         <img className="hsbimage" alt='' src="media/pstats2.png"/>
                     </div>
                 </div>
+                <hr className="hsbrule" style={{height: 5+'px', border: 'none'}}/>
                 <div className="jumbotron hsbheadline">
                     <p>
                         These barely scratch the surface of what the bot can do. With an ever growing list of commands, its capabilities will only get better!
