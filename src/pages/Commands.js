@@ -19,7 +19,7 @@ function Commands() {
                 <div className="collapse navbar-collapse" id="navbaritems">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item">
-                            <Link to="/" className="nav-link hsbnavlink hsbtitle">HockeyStats Bot</Link>
+                            <Link to="/" className="hsbnavlink hsbtitle">HockeyStats Bot</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/" className="nav-link hsbnavlink">Home</Link>
