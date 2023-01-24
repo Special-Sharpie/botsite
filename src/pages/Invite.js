@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Invite() {
@@ -11,17 +12,17 @@ function Invite() {
                 </button>  
                 <div className="collapse navbar-collapse" id="navbaritems">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li className="nav-item">
-                            <a href="/" className="nav-link hsbnavlink hsbtitle">HockeyStats Bot</a>
+                    <li className="nav-item">
+                            <Link to="/" className="nav-link hsbnavlink hsbtitle">HockeyStats Bot</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/" className="nav-link hsbnavlink ">Home</a>
+                            <Link to="/" className="nav-link hsbnavlink ">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/invite" className="nav-link hsbnavlink active">Invite</a>
+                            <Link to="/invite" className="nav-link hsbnavlink active">Invite</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/commands" className="nav-link hsbnavlink">Commands</a>
+                            <Link to="/commands" className="nav-link hsbnavlink">Commands</Link>
                         </li>
                     </ul>
                 </div>
@@ -47,6 +48,7 @@ function Invite() {
                         </a>
                     </div>
                 </div>
+                <hr className="hsbrule" style={{height: 5+'px', border: 'none'}}/>
                 <div className="jumbotron hsbheadline uppermargin">
                     <h4>
                         After inviting the bot, make sure you:

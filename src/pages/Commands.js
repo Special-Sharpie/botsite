@@ -1,15 +1,13 @@
 import React from 'react'
+import CommandItem from '../components/commandItem'
+import commandsJson from '../components/commanddesc.json'
+import { Link } from 'react-router-dom'
 
 function Commands() {
-    // async function commandsList(){
-    //     let ls = document.getElementById("commandList")
-    //     var getCommands = await fetch('media/commanddesc.json')
-    //     var commandsJson = await getCommands.json()
-    //     for (let command in commandsJson){
-    //         ls.append(`<h2 className="commandheader">${command}</h2><div className="jumbotron hsbheadline"><p>${commandsJson[command][0]}</p><br/><p>${commandsJson[command][1]}</p></div>`)
-    //     }
-    // }
-    // commandsList()
+    let ls = []
+        for (let command in commandsJson){
+            ls.push(<CommandItem commandsJson={commandsJson} command = {command}/>)
+        }
     
     return (
         <>
@@ -20,17 +18,17 @@ function Commands() {
                 </button>  
                 <div className="collapse navbar-collapse" id="navbaritems">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li className="nav-item">
-                            <a href="/" className="nav-link hsbnavlink hsbtitle">HockeyStats Bot</a>
+                    <li className="nav-item">
+                            <Link to="/" className="nav-link hsbnavlink hsbtitle">HockeyStats Bot</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/" className="nav-link hsbnavlink ">Home</a>
+                            <Link to="/" className="nav-link hsbnavlink">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/invite" className="nav-link hsbnavlink">Invite</a>
+                            <Link to="/invite" className="nav-link hsbnavlink">Invite</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/commands" className="nav-link hsbnavlink active">Commands</a>
+                            <Link to="/commands" className="nav-link hsbnavlink active">Commands</Link>
                         </li>
                     </ul>
                 </div>
@@ -42,6 +40,7 @@ function Commands() {
                     <p>If you have an idea for a command that is not listed here, submit a suggestion in the suggestion forum in our new HockeyStats Bot Discord Server!</p>
                 </div>
                 <hr className="hsbrule" style={{height: 5+'px', border: 'none'}}/>
+                {ls}
             </div>
             <footer>
                 <hr className="hsbrule"/>
